@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NextGenerationDev">
+    <title>{$modelone.title}</title>
+    <!--Favicon img-->
+    
+    <!--Bootstarp min css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+    <!--Bootstarp map css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css.map">
+    <!--Odometer css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/odometer.css">
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.min.css">
+    <!--Owl Carousel Theme css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.theme.default.min.css">
+    <!--All min css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/all.min.css">
+    <!--Animate css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/animate.css">
+    <!--Popup css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/magnific-popup.css">
+    <!--Swiper min css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/swiper-bundle.min.css">
+    <!--Owl Nice select css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/nice-select.css">
+    <!--main css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+	
+	<link rel="stylesheet" href="__PUBLIC__/css/x3dom.css">
+</head>
+<body>
+ <include file="Public:head"/>
+
+<section class="breadcumd-banner">
+    <div class="container">
+        <div class="breadcumd-wrapper">
+            <h1 class="left-content">
+                {$modelone.title}
+            </h1>
+            <ul class="right-content">
+                <li>
+                    <a href="index.php">
+                        Home
+                    </a>
+                </li>
+                
+                <li >
+                    {$modelone.title}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div class="blog-section pt-120 pb-120">
+<div class="container">
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="blog-items hover-none blog-single mb-50">
+            <div class="blog-thumb">
+                <x3d id="x3domOrientationSceneView" width='600px' height='450px' >
+                     <scene  DEF='scene'>
+                        <Viewpoint id="front" position="{$modelone.daxiao}" orientation="0.00451 0.99989 0.00319 6.25833" description="camera"></Viewpoint>
+                        <Viewpoint id="right" position="-3.07427 50.25329 2010.79608" orientation="1.00451 0.99989 0.00319 6.25833" description="camera"></Viewpoint>
+                        <Viewpoint id="left" position="-60 100 600" orientation="0.00451 0.99612 -0.03175 1.73722" description="camera"></Viewpoint>
+                        <Viewpoint id="top" position="0.05087 3.78235 -1.75890" orientation="0.00451 0.87466 0.48473 3.12040" description="camera"></Viewpoint>
+                        <directionalLight id="directional" direction='0 -1 0' on ="TRUE" intensity='1.0' shadowIntensity='0.0'>
+                        </directionalLight>
+					    
+                        <Transform  id="rotation">
+                         
+                        <inline   url="__PUBLIC__/x3d/{$modelone.url1}" id="tdModels">
+                                <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
+                                <Background groundColor='(1,1,1)' skyColor='(1,1,1)'></Background>
+						</inline>
+                       </Transform>
+					</scene>
+				</x3d>
+            </div>
+            
+            </div>
+           
+           
+        </div>
+        <div class="col-lg-4">
+            <div class="blog-list-right">
+           
+            <div class="items-box">
+                <h5 class="box-head">
+                    Camera Views
+                </h5>
+                <ul class="tag">
+				    <li>
+                        <a onclick="defaultO()">
+                        Default
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="left()">
+                        left
+                        </a>
+                    </li>
+					
+					 <li>
+                        <a onclick="right()">
+                        right
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+			<div class="items-box">
+                <h5 class="box-head">
+                    Animation Options
+                </h5>
+                <ul class="tag">
+				   
+                    <li>
+                        <a onclick="rotateX()">
+                        RotX
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="rotateY()">
+                        RotY
+                        </a>
+                    </li>
+                    <li>
+                       <a onclick="rotateZ()">
+                        RotZ
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="stopAnimation()">
+                        Stop
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="items-box">
+                <h5 class="box-head">
+                    Render and Lighting Options
+                </h5>
+                <ul class="tag">
+				    
+                    <li>
+                        <a onclick="headLightOnOff()">Headlight
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="lightDefault()">Default
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!--=========== Footer Section Here ========= -->
+ <include file="Public:foot"/>
+    <!--=========== Footer Section End ========= -->
+
+<!--Jquery 3 6 0 Min Js-->
+<script src="__PUBLIC__/js/jquery-3.6.0.min.js"></script>
+<!--Bootstrap bundle min Js-->
+<script src="__PUBLIC__/js/bootstrap.bundle.min.js"></script>
+<!--Waypoint Jquery min Js-->
+<script src="__PUBLIC__/js/jquery.waypoints.min.js"></script>
+<!--Viewport Jquery Js-->
+<script src="__PUBLIC__/js/viewport.jquery.js"></script>
+<!--Wow min Js-->
+<script src="__PUBLIC__/js/wow.min.js"></script>
+<!--Odometer Up min Js-->
+<script src="__PUBLIC__/js/odometer.min.js"></script>
+<!--Owl Carousel min Js-->
+<script src="__PUBLIC__/js/owl.min.js"></script>
+<!--Popup min Js-->
+<script src="__PUBLIC__/js/jquery.magnific-popup.min.js"></script>
+<!--Owl nice Jquery min Js-->
+<script src="__PUBLIC__/js/jquery.nice-select.min.js"></script>
+<!--Coundown min Js-->
+<script src="__PUBLIC__/js/countdowncustom.js"></script>
+<!--Swiper min Js-->
+<script src="__PUBLIC__/js/swiper-bundle.min.js"></script>
+<!--main Js-->
+<script src="__PUBLIC__/js/main.js"></script>
+
+<script src="__PUBLIC__/js/x3dom.js"></script>
+
+</body>
+
+</html>
+<script>
+
+let y = 1
+let rotateYInterval = null
+let rotateDom = document.querySelector('#rotation')
+
+
+function rotateY(){
+stopAnimation();
+    if(rotateYInterval){
+        clearInterval(rotateYInterval)
+        rotateYInterval = null
+    } else {
+        rotateYInterval = setInterval(()=>{
+            y+=0.01
+            rotateDom.setAttribute('rotation',"0,1,0,"+y)
+        },5)
+    }
+}
+
+
+let z = 1
+let rotateZInterval = null
+function rotateZ(){
+   stopAnimation();
+
+    if(rotateZInterval){
+        clearInterval(rotateZInterval)
+        rotateZInterval = null
+    } else {
+        rotateZInterval = setInterval(()=>{
+            z+=0.01
+            rotateDom.setAttribute('rotation',"0,0,1,"+z)
+        },5)
+    }
+}
+
+let x = 1
+let rotateXInterval = null
+function rotateX(){
+stopAnimation();
+    if(rotateXInterval){
+        clearInterval(rotateXInterval)
+        rotateXInterval = null
+    } else {
+        rotateXInterval = setInterval(()=>{
+            x+=0.01
+			
+            rotateDom.setAttribute('rotation',"1,0,0,"+x)
+        },5)
+    }
+}
+
+function stopAnimation(){
+    if(rotateXInterval){
+        clearInterval(rotateXInterval)
+        rotateXInterval = null
+    }
+    if(rotateZInterval){
+        clearInterval(rotateZInterval)
+        rotateZInterval = null
+    }
+    if(rotateYInterval){
+        clearInterval(rotateYInterval)
+        rotateYInterval = null
+    }
+}
+
+
+
+
+let headLightDom = document.querySelector('#head')
+let onOrOff = true
+function headLightOnOff(){
+    if(onOrOff){
+        headLightDom.setAttribute('headlight','false')
+        onOrOff = false
+    }else {
+        headLightDom.setAttribute('headlight','true')
+        onOrOff = true
+    }
+}
+function lightDefault(){
+    headLightDom.setAttribute('headlight','true')
+    onOrOff = true
+}
+
+function left(){
+    rotateDom.setAttribute('rotation','0,1,0,1.5')
+}
+
+function defaultO(){
+    rotateDom.setAttribute('rotation',`0,1,0,0`)
+
+}
+
+function right(){
+    rotateDom.setAttribute('rotation',`0,1,0,-1.5`)
+
+}
+
+</script>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NextGenerationDev">
+    <title>{$title}</title>
+    <!--Favicon img-->
+    
+    <!--Bootstarp min css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+    <!--Bootstarp map css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css.map">
+    <!--Odometer css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/odometer.css">
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.min.css">
+    <!--Owl Carousel Theme css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/owl.theme.default.min.css">
+    <!--All min css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/all.min.css">
+    <!--Animate css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/animate.css">
+    <!--Popup css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/magnific-popup.css">
+    <!--Swiper min css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/swiper-bundle.min.css">
+    <!--Owl Nice select css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/nice-select.css">
+    <!--main css-->
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+</head>
+<body>
+ <include file="Public:head"/>
+
+<section class="breadcumd-banner">
+    <div class="container">
+        <div class="breadcumd-wrapper">
+            <h1 class="left-content">
+                3D Models List
+            </h1>
+            <ul class="right-content">
+                <li>
+                    <a href="index.php">
+                        Home
+                    </a>
+                </li>
+                
+                <li >
+                    3D Models List
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<volist name="modelist" id="modelist">
+<section class="about-section pt-120 pb-120">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-thumb" style="text-align:center">
+                    <img src="__PUBLIC__/picture/{$modelist.img}"  style="width:250px;height:300px;" >
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <div class="about-content">
+                    <h3>
+                        {$modelist.title}
+                    </h3>
+                    <p>
+                        {$modelist.content}
+                    </p>
+                    
+                    <a href="/index.php/Home/Index/showdetail/id/{$modelist.id}" class="cmn--btn mt-4">
+                        view 3d model
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</volist>
+
+
+
+<!--=========== Footer Section Here ========= -->
+ <include file="Public:foot"/>
+    <!--=========== Footer Section End ========= -->
+
+<!--Jquery 3 6 0 Min Js-->
+<script src="__PUBLIC__/js/jquery-3.6.0.min.js"></script>
+<!--Bootstrap bundle min Js-->
+<script src="__PUBLIC__/js/bootstrap.bundle.min.js"></script>
+<!--Waypoint Jquery min Js-->
+<script src="__PUBLIC__/js/jquery.waypoints.min.js"></script>
+<!--Viewport Jquery Js-->
+<script src="__PUBLIC__/js/viewport.jquery.js"></script>
+<!--Wow min Js-->
+<script src="__PUBLIC__/js/wow.min.js"></script>
+<!--Odometer Up min Js-->
+<script src="__PUBLIC__/js/odometer.min.js"></script>
+<!--Owl Carousel min Js-->
+<script src="__PUBLIC__/js/owl.min.js"></script>
+<!--Popup min Js-->
+<script src="__PUBLIC__/js/jquery.magnific-popup.min.js"></script>
+<!--Owl nice Jquery min Js-->
+<script src="__PUBLIC__/js/jquery.nice-select.min.js"></script>
+<!--Coundown min Js-->
+<script src="__PUBLIC__/js/countdowncustom.js"></script>
+<!--Swiper min Js-->
+<script src="__PUBLIC__/js/swiper-bundle.min.js"></script>
+<!--main Js-->
+<script src="__PUBLIC__/js/main.js"></script>
+</body>
+
+</html>
